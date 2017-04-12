@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57D878E61E9DCD4E00547F7D /* ToDoItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D878E51E9DCD4E00547F7D /* ToDoItemTests.swift */; };
+		57D878E81E9DD1A900547F7D /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D878E71E9DD1A900547F7D /* ToDoItem.swift */; };
+		57D878EA1E9DD62900547F7D /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D878E91E9DD62900547F7D /* Location.swift */; };
+		57D878EC1E9DD9D100547F7D /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D878EB1E9DD9D100547F7D /* LocationTests.swift */; };
+		57D878EF1E9DDAB800547F7D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57D878EE1E9DDAB800547F7D /* CoreLocation.framework */; };
+		57D878F11E9DDED000547F7D /* ItemManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D878F01E9DDED000547F7D /* ItemManagerTests.swift */; };
+		57D878F31E9DFF7D00547F7D /* ItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D878F21E9DFF7D00547F7D /* ItemManager.swift */; };
 		B68A03271E9D2CE4002BF7C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68A03261E9D2CE4002BF7C4 /* AppDelegate.swift */; };
 		B68A03291E9D2CE4002BF7C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68A03281E9D2CE4002BF7C4 /* ViewController.swift */; };
 		B68A032C1E9D2CE4002BF7C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B68A032A1E9D2CE4002BF7C4 /* Main.storyboard */; };
@@ -26,6 +33,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		57D878E51E9DCD4E00547F7D /* ToDoItemTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoItemTests.swift; sourceTree = "<group>"; };
+		57D878E71E9DD1A900547F7D /* ToDoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
+		57D878E91E9DD62900547F7D /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		57D878EB1E9DD9D100547F7D /* LocationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTests.swift; sourceTree = "<group>"; };
+		57D878EE1E9DDAB800547F7D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		57D878F01E9DDED000547F7D /* ItemManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemManagerTests.swift; sourceTree = "<group>"; };
+		57D878F21E9DFF7D00547F7D /* ItemManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemManager.swift; sourceTree = "<group>"; };
 		B68A03231E9D2CE4002BF7C4 /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B68A03261E9D2CE4002BF7C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B68A03281E9D2CE4002BF7C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57D878EF1E9DDAB800547F7D /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +71,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		57D878ED1E9DDAB800547F7D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				57D878EE1E9DDAB800547F7D /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B68A031A1E9D2CE4002BF7C4 = {
 			isa = PBXGroup;
 			children = (
 				B68A03251E9D2CE4002BF7C4 /* ToDo */,
 				B68A033A1E9D2CE4002BF7C4 /* ToDoTests */,
 				B68A03241E9D2CE4002BF7C4 /* Products */,
+				57D878ED1E9DDAB800547F7D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +103,9 @@
 			children = (
 				B68A03261E9D2CE4002BF7C4 /* AppDelegate.swift */,
 				B68A03281E9D2CE4002BF7C4 /* ViewController.swift */,
+				57D878E71E9DD1A900547F7D /* ToDoItem.swift */,
+				57D878E91E9DD62900547F7D /* Location.swift */,
+				57D878F21E9DFF7D00547F7D /* ItemManager.swift */,
 				B68A032A1E9D2CE4002BF7C4 /* Main.storyboard */,
 				B68A032D1E9D2CE4002BF7C4 /* Assets.xcassets */,
 				B68A032F1E9D2CE4002BF7C4 /* LaunchScreen.storyboard */,
@@ -91,6 +118,9 @@
 			isa = PBXGroup;
 			children = (
 				B68A033B1E9D2CE4002BF7C4 /* ToDoTests.swift */,
+				57D878EB1E9DD9D100547F7D /* LocationTests.swift */,
+				57D878E51E9DCD4E00547F7D /* ToDoItemTests.swift */,
+				57D878F01E9DDED000547F7D /* ItemManagerTests.swift */,
 				B68A033D1E9D2CE4002BF7C4 /* Info.plist */,
 			);
 			path = ToDoTests;
@@ -202,7 +232,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B68A03291E9D2CE4002BF7C4 /* ViewController.swift in Sources */,
+				57D878F31E9DFF7D00547F7D /* ItemManager.swift in Sources */,
 				B68A03271E9D2CE4002BF7C4 /* AppDelegate.swift in Sources */,
+				57D878EA1E9DD62900547F7D /* Location.swift in Sources */,
+				57D878E81E9DD1A900547F7D /* ToDoItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +243,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57D878E61E9DCD4E00547F7D /* ToDoItemTests.swift in Sources */,
+				57D878EC1E9DD9D100547F7D /* LocationTests.swift in Sources */,
+				57D878F11E9DDED000547F7D /* ItemManagerTests.swift in Sources */,
 				B68A033C1E9D2CE4002BF7C4 /* ToDoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +448,7 @@
 				B68A03421E9D2CE4002BF7C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B68A03431E9D2CE4002BF7C4 /* Build configuration list for PBXNativeTarget "ToDoTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +457,7 @@
 				B68A03451E9D2CE4002BF7C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

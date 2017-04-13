@@ -26,7 +26,16 @@ struct ToDoItem: Equatable {
 }
 
 func ==(lhs: ToDoItem, rhs: ToDoItem) -> Bool {
-    if lhs.location?.name != rhs.location?.name {
+    guard lhs.title == rhs.title else {
+        return false
+    }
+    guard lhs.itemDescription == rhs.itemDescription else {
+        return false
+    }
+    guard lhs.timestamp == rhs.timestamp else {
+        return false
+    }
+    guard lhs.location == rhs.location else {
         return false
     }
     return true

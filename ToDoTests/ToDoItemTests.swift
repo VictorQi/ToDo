@@ -39,9 +39,8 @@ class ToDoItemTests: XCTestCase {
     func test_Init_WhenGivenLocation_SetsLocations() {
         let location = Location(name: "Foo")
         let item = ToDoItem(title: "", location: location)
-//        下面这个断言表述是错误的，因为Location没有遵循Equatable协议
-//        XCTAssertEqual(item.location, location, "Should set location")
-        XCTAssertEqual(item.location?.name, location.name, "Should set location")
+
+        XCTAssertEqual(item.location, location, "Should set location")
     }
     
     func test_EqualItems_AreEqual() {
@@ -54,6 +53,34 @@ class ToDoItemTests: XCTestCase {
     func test_Items_WhenLocationDiffers_AreNotEuqal() {
         let first = ToDoItem(title: "", location: Location(name: "Foo"))
         let second = ToDoItem(title: "", location: Location(name: "Bar"))
+        
+        XCTAssertNotEqual(first, second)
+    }
+    
+    func test_Items_WhenOneHasLocationAnotherIsNil_AreNotEqual() {
+        let first = ToDoItem(title: "", location: Location(name: "Foo"))
+        let second = ToDoItem(title: "", location: nil)
+        
+        XCTAssertNotEqual(first, second)
+    }
+    
+    func test_Items_WhenTimestampDiffers_AreNotEqual() {
+        let first = ToDoItem(title: "Foo", timestamp: 1.0)
+        let second = ToDoItem(title: "Foo", timestamp: 2.0)
+        
+        XCTAssertNotEqual(first, second)
+    }
+    
+    func test_Items_WhenDescriptionDiffers_AreNotEqual() {
+        let first = ToDoItem(title: "Foo", itemDescription: "Bar")
+        let second = ToDoItem(title: "Foo", itemDescription: "Baz")
+        
+        XCTAssertNotEqual(first, second)
+    }
+    
+    func test_Items_WhenTitleDiffers_AreNotEqual() {
+        let first = ToDoItem(title: "Foo")
+        let second = ToDoItem(title: "Boo")
         
         XCTAssertNotEqual(first, second)
     }

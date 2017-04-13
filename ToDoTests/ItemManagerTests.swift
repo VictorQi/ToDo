@@ -17,7 +17,7 @@ class ItemManagerTests: XCTestCase {
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        sut = nil
         super.tearDown()
     }
     
@@ -30,7 +30,7 @@ class ItemManagerTests: XCTestCase {
     }
     
     func test_AddItem_IncreasesToDoCountToOne() {
-        sut.add(ToDoItem(title: ""))
+        sut.add(ToDoItem(title: "Foo"))
         XCTAssertEqual(sut.toDoCount, 1)
     }
     
@@ -39,13 +39,13 @@ class ItemManagerTests: XCTestCase {
         sut.add(item)
         
         let returnedItem = sut.item(at: 0)
-        XCTAssertEqual(returnedItem?.title, item.title)
+        XCTAssertEqual(returnedItem, item)
     }
     
     func test_CheckItemAt_ChangesCount() {
-        sut.add(ToDoItem(title: ""))
+        sut.add(ToDoItem(title: "Foo"))
         
-        sut.checkItem(at: 0)
+        _ = sut.checkItem(at: 0)
         XCTAssertEqual(sut.toDoCount, 0)
         XCTAssertEqual(sut.doneCount, 1)
     }
@@ -56,16 +56,44 @@ class ItemManagerTests: XCTestCase {
         sut.add(first)
         sut.add(second)
         
-        sut.checkItem(at: 0)
-        XCTAssertEqual(sut.item(at: 0)?.title, "Second")
+        _ = sut.checkItem(at: 0)
+        XCTAssertEqual(sut.item(at: 0), second)
     }
     
     func test_DoneItemAt_ReturnsCheckedItem() {
         let first = ToDoItem(title: "first")
         sut.add(first)
         
-        sut.checkItem(at: 0)
+        _ = sut.checkItem(at: 0)
         let doneItem = sut.doneItem(at: 0)
-        XCTAssertEqual(doneItem.title, first.title)
+        XCTAssertEqual(doneItem, first)
+    }
+    
+    func test_RemoveAll_ResultsInCountsBeZero() {
+        let first = ToDoItem(title: "first")
+        let second = ToDoItem(title: "second")
+        
+        sut.add(first)
+        sut.add(second)
+        _ = sut.checkItem(at: 1)
+        
+        XCTAssertEqual(sut.doneCount, 1)
+        XCTAssertEqual(sut.toDoCount, 1)
+        
+        sut.removeAll()
+        
+        XCTAssertEqual(sut.doneCount, 0)
+        XCTAssertEqual(sut.toDoCount, 0)
+    }
+    
+    func test_Add_WhenItemIsAlreadyContained_DoesNotIncreaseCount() {
+        let first = ToDoItem(title: "First")
+        let second = ToDoItem(title: "First")
+        XCTAssertEqual(first, second)
+        
+        sut.add(first)
+        sut.add(second)
+        
+        XCTAssertEqual(sut.toDoCount, 1)
     }
 }

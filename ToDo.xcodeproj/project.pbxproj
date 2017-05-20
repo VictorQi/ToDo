@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57AD81881ED02A7B0041FD3D /* ItemListDataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AD81871ED02A7B0041FD3D /* ItemListDataProviderTests.swift */; };
+		57AD81911ED039C30041FD3D /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AD818F1ED039C30041FD3D /* ItemCell.swift */; };
+		57AD81921ED039C30041FD3D /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57AD81901ED039C30041FD3D /* ItemCell.xib */; };
 		57D878E61E9DCD4E00547F7D /* ToDoItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D878E51E9DCD4E00547F7D /* ToDoItemTests.swift */; };
 		57D878E81E9DD1A900547F7D /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D878E71E9DD1A900547F7D /* ToDoItem.swift */; };
 		57D878EA1E9DD62900547F7D /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D878E91E9DD62900547F7D /* Location.swift */; };
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		57AD81871ED02A7B0041FD3D /* ItemListDataProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemListDataProviderTests.swift; sourceTree = "<group>"; };
+		57AD818F1ED039C30041FD3D /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		57AD81901ED039C30041FD3D /* ItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
 		57D878E51E9DCD4E00547F7D /* ToDoItemTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoItemTests.swift; sourceTree = "<group>"; };
 		57D878E71E9DD1A900547F7D /* ToDoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
 		57D878E91E9DD62900547F7D /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
@@ -108,6 +114,8 @@
 			children = (
 				57D878FC1E9F785900547F7D /* ItemListViewController.swift */,
 				57D878FF1E9F7F0E00547F7D /* ItemListDataProvider.swift */,
+				57AD818F1ED039C30041FD3D /* ItemCell.swift */,
+				57AD81901ED039C30041FD3D /* ItemCell.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -151,6 +159,7 @@
 				B68A033D1E9D2CE4002BF7C4 /* Info.plist */,
 				B68A033B1E9D2CE4002BF7C4 /* ToDoTests.swift */,
 				57D878F61E9F761D00547F7D /* ItemListViewControllerTest.swift */,
+				57AD81871ED02A7B0041FD3D /* ItemListDataProviderTests.swift */,
 				57D878F51E9F716B00547F7D /* Models_Test */,
 			);
 			path = ToDoTests;
@@ -241,6 +250,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57AD81921ED039C30041FD3D /* ItemCell.xib in Resources */,
 				B68A03311E9D2CE4002BF7C4 /* LaunchScreen.storyboard in Resources */,
 				B68A032E1E9D2CE4002BF7C4 /* Assets.xcassets in Resources */,
 				B68A032C1E9D2CE4002BF7C4 /* Main.storyboard in Resources */,
@@ -265,6 +275,7 @@
 				57D879001E9F7F0E00547F7D /* ItemListDataProvider.swift in Sources */,
 				B68A03271E9D2CE4002BF7C4 /* AppDelegate.swift in Sources */,
 				57D878EA1E9DD62900547F7D /* Location.swift in Sources */,
+				57AD81911ED039C30041FD3D /* ItemCell.swift in Sources */,
 				57D878E81E9DD1A900547F7D /* ToDoItem.swift in Sources */,
 				57D878FD1E9F785900547F7D /* ItemListViewController.swift in Sources */,
 			);
@@ -277,6 +288,7 @@
 				57D878E61E9DCD4E00547F7D /* ToDoItemTests.swift in Sources */,
 				57D878F71E9F761D00547F7D /* ItemListViewControllerTest.swift in Sources */,
 				57D878EC1E9DD9D100547F7D /* LocationTests.swift in Sources */,
+				57AD81881ED02A7B0041FD3D /* ItemListDataProviderTests.swift in Sources */,
 				57D878F11E9DDED000547F7D /* ItemManagerTests.swift in Sources */,
 				B68A033C1E9D2CE4002BF7C4 /* ToDoTests.swift in Sources */,
 			);
